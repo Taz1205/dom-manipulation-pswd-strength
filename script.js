@@ -17,22 +17,12 @@ function updateProgressBar() {
 }
 
 function calculateStrength(password) {
-  let strength = 0;
+  let strength = password.length * 5;
 
-  if (password.length >= 8) {
-    strength += 25;
-  }
-
-  if (/[A-Z]/.test(password)) {
-    strength += 25;
-  }
-
-  if (/[a-z]/.test(password)) {
-    strength += 25;
-  }
-
-  if (/[0-9]/.test(password) || /[\W]/.test(password)) {
-    strength += 25;
+  if (strength > 100) {
+    strength = 100;
+  } else if (strength < 0) {
+    strength = 0;
   }
 
   return strength;

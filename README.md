@@ -52,3 +52,7 @@ The user enters a password in the input field. Even if it's just a single charac
 The updateStrengthBar function is called. It uses the calculateStrength function to calculate the strength of the password, which is a number between 0 and 100.
 The value of the progress bar is updated with the calculated strength.
 If the user changes a single character in the input field, this entire process will run again, updating the progress bar value to reflect the new strength of the password.
+
+I also implemented a gradient progress bar depending on the strength score it goes from red(weak password) to orange to green(strong password).
+
+- 2nd requirement: let strength = password.length * 5;
