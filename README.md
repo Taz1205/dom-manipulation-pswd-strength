@@ -39,3 +39,9 @@ Then the progress bar should be green
 Given the user inputs a password
 When the password contains 12 characters or more
 Then the page should display the feedback “Grrrreat!”
+
+#### Implementation
+
+After creating a basic HTML and CSS file to implement this requirement, I created a JS file to add the strength bar functionality using DOM manipulation. In the JavaScript file, we have a function calculateStrength that determines the strength of the password by checking if it meets certain usual conditions like having a length greater than or equal to 8, containing uppercase and lowercase letters, and containing numbers or special characters.
+
+The updateStrengthBar function is triggered whenever the user types in the password field. It calculates the strength of the current password and updates the value of the progress bar accordingly.
