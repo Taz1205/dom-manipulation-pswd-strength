@@ -1,5 +1,12 @@
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
   font-family: Arial, sans-serif;
+  background-color: lightyellow;
 }
 
 #password {
@@ -11,6 +18,19 @@ body {
 
 #strength {
   width: 40%;
-  height: 30px;
+  height: 20px;
   margin-top: 20px;
+  background: #ddd;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  color: transparent;
+}
+
+#strength::-webkit-progress-value {
+  background: #00ff00;
+}
+
+#strength::-moz-progress-bar {
+  background: #00ff00;
 }
