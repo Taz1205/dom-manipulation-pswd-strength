@@ -6,31 +6,27 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: lightyellow;
+  background-color: #f3f3f3;
 }
 
 #password {
-  width: 40%;
   margin-top: 20px;
   padding: 10px;
   font-size: 18px;
 }
 
-#strength {
+#progress-bar {
   width: 40%;
   height: 20px;
   margin-top: 20px;
-  background: #ddd;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  color: transparent;
+  background-color: #ddd;
+  border-radius: 10px;
 }
 
-#strength::-webkit-progress-value {
-  background: #00ff00;
-}
-
-#strength::-moz-progress-bar {
-  background: #00ff00;
+#progress-fill {
+  height: 100%;
+  width: 0;
+  background-color: red;
+  border-radius: 10px;
+  transition: width 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }

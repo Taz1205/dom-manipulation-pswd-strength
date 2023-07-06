@@ -45,3 +45,10 @@ Then the page should display the feedback “Grrrreat!”
 After creating a basic HTML and CSS file to implement this requirement, I created a JS file to add the strength bar functionality using DOM manipulation. In the JavaScript file, we have a function calculateStrength that determines the strength of the password by checking if it meets certain usual conditions like having a length greater than or equal to 8, containing uppercase and lowercase letters, and containing numbers or special characters.
 
 The updateStrengthBar function is triggered whenever the user types in the password field. It calculates the strength of the current password and updates the value of the progress bar accordingly.
+
+- 1st requirement: This is how it works:
+
+The user enters a password in the input field. Even if it's just a single character, the 'input' event will be fired.
+The updateStrengthBar function is called. It uses the calculateStrength function to calculate the strength of the password, which is a number between 0 and 100.
+The value of the progress bar is updated with the calculated strength.
+If the user changes a single character in the input field, this entire process will run again, updating the progress bar value to reflect the new strength of the password.

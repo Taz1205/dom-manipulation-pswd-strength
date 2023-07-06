@@ -1,11 +1,19 @@
 const passwordInput = document.getElementById("password");
-const strengthBar = document.getElementById("strength");
+const progressFill = document.getElementById("progress-fill");
 
-passwordInput.addEventListener("input", updateStrengthBar);
+passwordInput.addEventListener("input", updateProgressBar);
 
-function updateStrengthBar() {
+function updateProgressBar() {
   const strength = calculateStrength(passwordInput.value);
-  strengthBar.value = strength;
+  progressFill.style.width = `${strength}%`;
+
+  if (strength <= 33) {
+    progressFill.style.backgroundColor = "red";
+  } else if (strength <= 66) {
+    progressFill.style.backgroundColor = "orange";
+  } else {
+    progressFill.style.backgroundColor = "limegreen";
+  }
 }
 
 function calculateStrength(password) {
