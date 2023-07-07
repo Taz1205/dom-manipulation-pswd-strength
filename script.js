@@ -8,15 +8,12 @@ function updateProgressBar() {
   const strength = calculateStrength(passwordInput.value);
   progressFill.style.width = `${strength}%`;
 
-  if (passwordInput.value.length < 8) {
+  if (passwordInput.value.length < 8 && strength <= 33) {
     progressFill.style.backgroundColor = "red";
     feedback.textContent = "Should be longer";
-  } else if (strength <= 33) {
-    progressFill.style.backgroundColor = "red";
-    feedback.textContent = "";
-  } else if (strength <= 66) {
+  } else if (strength <= 66 && passwordInput.value.length < 12) {
     progressFill.style.backgroundColor = "orange";
-    feedback.textContent = "";
+    feedback.textContent = "Pretty good";
   } else {
     progressFill.style.backgroundColor = "limegreen";
     feedback.textContent = "";
