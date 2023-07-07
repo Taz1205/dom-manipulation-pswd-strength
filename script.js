@@ -16,7 +16,7 @@ function updateProgressBar() {
     feedback.textContent = "Pretty good";
   } else {
     progressFill.style.backgroundColor = "limegreen";
-    feedback.textContent = "";
+    feedback.textContent = "Grrrreat!";
   }
 }
 
