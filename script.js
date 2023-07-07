@@ -1,5 +1,6 @@
 const passwordInput = document.getElementById("password");
 const progressFill = document.getElementById("progress-fill");
+const feedback = document.getElementById("feedback");
 
 passwordInput.addEventListener("input", updateProgressBar);
 
@@ -9,12 +10,16 @@ function updateProgressBar() {
 
   if (passwordInput.value.length < 8) {
     progressFill.style.backgroundColor = "red";
+    feedback.textContent = "Should be longer";
   } else if (strength <= 33) {
     progressFill.style.backgroundColor = "red";
+    feedback.textContent = "";
   } else if (strength <= 66) {
     progressFill.style.backgroundColor = "orange";
+    feedback.textContent = "";
   } else {
     progressFill.style.backgroundColor = "limegreen";
+    feedback.textContent = "";
   }
 }
 

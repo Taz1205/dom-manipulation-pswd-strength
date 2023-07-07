@@ -56,3 +56,7 @@ If the user changes a single character in the input field, this entire process w
 I also implemented a gradient progress bar depending on the strength score it goes from red(weak password) to orange to green(strong password).
 
 - 2nd requirement: let strength = password.length * 5;
+- 3rd requirement:if (passwordInput.value.length < 8) progressFill.style.backgroundColor = "red";
+- 4th requirement:
+    A new div with the id feedback is added to the HTML. This is where feedback messages will be displayed. Some styling is added for the feedback div in the CSS, and the JavaScript is updated to change the text content of the feedback div based on the length of the password. If the password is less than 8 characters long, the feedback message "Should be longer" is displayed. Otherwise, the feedback message is cleared.
+- 5th requirement:

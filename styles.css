@@ -31,3 +31,7 @@ body {
   border-radius: 10px;
   transition: width 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
+#feedback {
+  margin-top: 20px;
+  font-size: 18px;
+}
